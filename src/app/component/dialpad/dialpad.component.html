@@ -1,0 +1,29 @@
+<div class="number-input-container">
+    <input class="number-input" [ngModel]="phoneNumber | phoneNumber"
+    (ngModelChange)="phoneNumber=$event"
+     name="inputField" type="text">
+  
+</div>
+<div  >
+  <div class="dialpad-container">
+    <app-dialpad-button [main]="'1'" [letter]="" ></app-dialpad-button>
+    <app-dialpad-button [main]="'2'" [letter]="'ABC'" (onPress)="press($event)"></app-dialpad-button>
+    <app-dialpad-button [main]="'3'" [letter]="'DEF'" (onPress)="press($event)"></app-dialpad-button>
+  </div>
+  <div class="dialpad-container">
+    <app-dialpad-button [main]="'4'" [letter]="'GHI'"></app-dialpad-button>
+    <app-dialpad-button [main]="'5'" [letter]="'JFK'"></app-dialpad-button>
+    <app-dialpad-button [main]="'6'" [letter]="'LNO'"></app-dialpad-button>
+  </div>
+  <div class="dialpad-container">
+    <app-dialpad-button [main]="'7'" [letter]="'PQR'"></app-dialpad-button>
+    <app-dialpad-button [main]="'8'" [letter]="'STU'"></app-dialpad-button>
+    <app-dialpad-button [main]="'9'" [letter]="'VWXZ'"></app-dialpad-button>
+  </div>
+  <div class="dialpad-container">
+      <app-dialpad-button [main]="'*'"></app-dialpad-button>
+      <app-dialpad-button [main]="'0'"></app-dialpad-button>
+      <app-dialpad-button [main]="'#'"></app-dialpad-button>
+  </div>
+</div>
+
